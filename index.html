@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="partials/css/style.css">
+    <script src="partials/js/script.js"></script>
+    <title>Avitya Enterprises</title>
+</head>
+<body>
+    <div class="nav">
+        <img src="/partials/images/aesymbo.png" alt="" srcset="">
+    </div>
+
+    <div class="data" id="data">
+        <!-- DATE -->
+        <table>
+            <tr> 
+                <td>    Date :  </td>
+                <td> <input type="date" id="date" name="date"></input></td>
+            </tr>
+        </table>
+        <hr>
+
+        <!-- TO -->
+        <table>
+            <tr> 
+                <td>    To :  </td>
+            </tr>
+            <tr>
+                <td> <input type="text" id="to" name="to"></input></td>
+            </tr>
+            <tr> 
+                <td>    Company Name :  </td>
+            </tr>
+            <tr>
+                <td> <input type="text" id="cname" name="cname"></input></td>
+            </tr>
+            <tr> 
+                <td>    Company Address :  </td>
+            </tr>
+            <tr>
+                <td> <input type="address" id="caddress" name="caddress"></input></td>
+            </tr>
+        </table>          
+        <hr>
+
+        <!-- ITEM LIST -->
+        <div class="list" id="list">
+            <table>
+                <tr>
+                    <td>    Item No : #1 </td>
+                </tr>
+                <tr> 
+                    <td colspan="2">    Item Name : <input type="text" id="iname1" name="iname1" ></td>
+                </tr>
+                <tr> 
+                    <td colspan="2">    HSN : <input type="number" id="ihsn1" name="ihsn1" style="width: 77%;"></td>
+                </tr>
+                <tr> 
+                    <td>    Unit Price : <input type="number" id="iunitprice1" name="iunitprice1" style="width: 50%;" onblur="generateTotal(this.value, this.parentElement.nextElementSibling.childNodes[1].value, 'itemTotal1')"> </td>
+                    <td>    Qty :  <input type="number" id="iqty1" name="iqty1" style="width: 55%;" onblur="generateTotal(this.parentElement.previousElementSibling.childNodes[1].value, this.value,'itemTotal1')"></td>
+                </tr>
+                <tr>
+                    <td>    Total : <span id="itemTotal1" name="itemTotal"> 0 /- Rs </span> </td>
+                </tr>
+            </table>          
+            <hr>
+        </div>        
+
+    <div class="finalTotal">
+        <table>
+            <tr>
+                <td>    Sub Total : </span> </td>
+                <td>    <span id="subTotal" > </span> </td>
+            </tr>            
+            <tr> 
+                <td>    Tax  <input type="number" id="gst" name="gst" style="width: 30%;" onblur="generateFinalTotal()">% : </td>
+                <td>    <span id="gstTotal"> </span> </td>
+            </tr>
+            <tr>
+                <td>    <b> Final Total : </b> </td>
+                <td>    <span id="finalTotal" > </span> </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+    <div class="button" id="buttonVisibility">
+        <ul id="ulOfOptions">
+            <li onclick="location.reload()">Reset   </li>
+            <li onclick="addItem()">    Add Item    </li>
+            <li onclick="generatePdf()">Gererate PDF   </li>
+        </ul>
+        <button onclick="options()"> + </button>
+    </div>
+</body>
+</html>

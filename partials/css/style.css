@@ -1,0 +1,114 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 360px;
+    margin: auto;
+}
+
+/* HEADER*/
+.nav{
+    width: 100%;
+    height: 10vh;
+    font-size: 2vh;
+    background-color: #8dc45d;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+}
+
+.nav img{
+    height: 70%;
+    width: auto;
+    padding-left: 5%;
+}
+
+.data{
+    width: 100%;
+    padding: 5% 0 0 0;
+}
+
+.data table{
+    height: auto;
+    color: #565656;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    padding: 5% 0 5% 5%;
+    width: 100%;
+}
+
+.data hr{
+    opacity: 0.5;
+    padding: 0 50% 0 50%;
+}
+
+.data table{ margin: 0 0 2% 0;}
+
+.data input{
+    width: 90%;
+    padding: 2%;
+    border: none;
+    border-bottom: 1px solid #565656;
+    margin: 0 0 3% 0;
+    background-color: none;
+}
+
+.data input:focus{
+    border: none;
+    border-bottom: 1px solid #565656;
+    background-color: none;
+}
+
+.visible{
+    position: fixed;
+    bottom: 2vh;
+    right: 2vh;
+    width: 40%;
+    height: max-content;
+    border-radius: 1rem;
+    background-color: #8dc45d;
+    color: rgb(255, 255, 255);
+    font-size: 2.5vh;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    box-shadow: none;
+    padding: 0 0 10vh 0;
+}
+.list input{
+    width: 63%;
+}
+
+.button ul{
+    display: none;
+}
+
+.button ul li{
+    list-style: none;
+    padding: 20% 0 0 10%;
+}
+
+.button button{
+    position: fixed;
+    bottom: 2vh;
+    right: 2vh;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    background-color: #8dc45d;
+    color: #fff;
+    font-size: 5vh;
+    border: none;
+    box-shadow: none;
+}
+
+.finalTotal td{
+    width: 20%;
+}

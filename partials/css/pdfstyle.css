@@ -1,0 +1,214 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto&display=swap');
+
+html{
+    background: transparent;
+}
+*{    background: transparent; }
+
+body{
+    background: transparent;
+    margin: 0;
+}
+
+.page[size="A4"] {
+    width: 21cm;
+    height: 29.7cm;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+}
+
+/* HEADER */
+.header{
+    display: flex;
+    flex-direction: column;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.header-top{
+    background: url("../images/pdf/header.png") no-repeat left top;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 7%;
+    display: flex;
+    flex-direction: row;
+}
+
+.header-title{
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    padding: .5% 0 0 3% ;
+}
+
+.header-top span {
+    width: 10%;
+    color: #fff;
+    background-color: #1ead75;
+    font-family: 'Roboto', sans-serif;
+}
+
+.title-top{
+    font-size: 2.5rem;
+    letter-spacing: 15px;
+    padding: 1% 0 0 2% ;
+    font-weight: bold;
+}
+
+.title-below{
+    font-size: 1em;
+    letter-spacing: 13px;
+    padding: 0 0 0 2.3%;
+    position: relative;
+    top: -7%;
+}
+
+.date{
+    width: 30%;
+    display: flex;
+    align-self: center;
+    font-size: 1.4rem;
+    font-weight: 400;    
+    position: relative;
+    left: 360px;
+    padding: 1% 0 0 0;
+}
+
+.gstno{
+    background-color: #d3d3d3;
+    width: 32%;
+    position: relative;
+    margin: 1% 0 0 3%;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.1em;
+}
+
+/* MAIN CONTENT */
+.main-content{
+    display: flex;
+    flex-direction: column;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.from-to{
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-between;
+    padding: 5% 3%;
+}
+
+.from{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    letter-spacing: 1px;
+}
+
+#from-title{
+    font-size: 1.3em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.to{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: end;
+    letter-spacing: 1px;
+}
+
+#to-title{
+    font-size: 1.3em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#company-name{
+    color: #1e497d;
+    font-weight: bold;
+}
+
+.item-list{
+    width: 100%;
+}
+table{
+    width: 100%;
+    text-align: center;    
+}
+
+.item-list th{
+    background: #00b050;
+    font-size: 1.2em;
+    color: #fff;
+    padding: 1.5%;
+    text-align: center;
+}
+
+td {
+    padding: 1%;
+}
+
+tr {
+    color: #212422;
+}
+.item-list tr:nth-child(even) {
+    background-color: #e8e8e8;
+}
+
+.total-table{
+    display: flex;
+    align-self: flex-end;
+    width: 25%;
+    padding: 5% 0;
+}
+
+.total-table td,th{
+    text-align: left;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+.total-table th{
+    background: #00b050;
+    color: #fff;
+}
+
+/* FOOTER */
+
+.footer{    
+    display: flex;
+    flex-direction: column;
+    font-family: 'PT Sans', sans-serif;   
+}
+
+.bottom-info{
+    padding: 4% 3%;
+}
+
+.bottom-info > span{
+    font-size: .9rem;
+    margin: 2% 0;
+}
+
+.bottom-info > span + p{
+    font-size: 1.1rem;
+    padding-top: 2%;
+}
+
+.bottom-info p{
+    font-size: 1rem;
+    line-height: 30%;
+}
+
+.bottom-info + p{
+    font-size: 2rem;
+    padding: 0 3%;
+    background-color: #00b050;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin: 0;
+}
