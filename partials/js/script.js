@@ -196,6 +196,7 @@ function generatePdf(){
     <p>THANK YOU FOR YOUR BUSINESS</p>
 </div>        
 </div>
+    <button onclick="window.print()">Print</button>
 </body>
     </html>`;
     
