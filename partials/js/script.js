@@ -71,6 +71,14 @@ function generatePdf(){
     var date = new Date( document.getElementById("date").value );
     var displayDate = date.getDay() + " " + months[date.getMonth()].substring(0, 3) + " " + date.getFullYear();
 
+    // SENDERS DETAILS
+    var ycname = document.getElementById("ycname").value;
+    var yaddress = document.getElementById("yaddress").value;
+    var yphnno = document.getElementById("yphnno").value;
+    var yemail = document.getElementById("yemail").value;
+    var from = document.getElementById("from").value;
+    var ygstno = document.getElementById("ygstno").value;
+
     // RECEIVERS DETAILS
     var to = document.getElementById("to").value;
     var cname = document.getElementById("cname").value;
@@ -99,14 +107,14 @@ function generatePdf(){
                 <div class=date>Date : ${displayDate} </div>
             </div>
             <div class="gstno">
-                GST NO : 27AOYPT5834R1ZG
+                GST NO : ${ygstno}
             </div>
             <div class="from-to">
                 <div class="from">
-                    <span id="from-title"> AVITYA ENTERPRISES</span>
-                    <span id="from-address"> Shop No. C1, Plot No k/R6, Phase II, Chakan MIDC, Near Hundai Company, A/p Khalumbre, Tal. Khed,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dist. Pune-410501 </span>
-                    <span id="phone"> Ph: 7030303902</span>
-                    <span id="mail"> Mail : <a href="mailto:avitya.enterprises@gmail.com"> avitya.enterprises@gmail.com</a></span>
+                    <span id="from-title"> ${ycname} </span>
+                    <span id="from-address"> ${yaddress} </span>
+                    <span id="phone"> Ph: ${yphnno}</span>
+                    <span id="mail"> Mail : <a href="mailto:${yemail}"> ${yemail}</a></span>
                 </div>
                 <div class="to">
                     <span id="to-title">To: <span id="toname"> ${to} </span></span> 
@@ -132,8 +140,7 @@ function generatePdf(){
     // ITEM LIST
     var pdfItemList = ``;
     var itemsList = document.getElementsByTagName("table");
-    for (let i = 1; i < itemsList.length-2; i++){
-
+    for (let i = 1; i < itemsList.length-3; i++){
         var itemName =  document.getElementById(`iname${i}`).value;
         var itemHsn =  document.getElementById(`ihsn${i}`).value;
         var itemUnitPrice =  document.getElementById(`iunitprice${i}`).value;
@@ -180,7 +187,7 @@ function generatePdf(){
 </div>
 <div class="footer">
     <div class="bottom-info">
-        <span>Quotation Prepared By: Vinit Tulave</span>
+        <span>Quotation Prepared By: ${from}</span>
         <p> TERMS AND CONDITIONS:</p>
         <p> 1. Customer will be billed after indicaticating acceptance of this quote. </p>
         <p> 2. Payment will be due prior to delivery of service and goods. </p>
@@ -189,13 +196,11 @@ function generatePdf(){
     <p>THANK YOU FOR YOUR BUSINESS</p>
 </div>        
 </div>
-<button onclick="window.print()">Print</button>
 </body>
     </html>`;
     
     // FINAL PDF CONTENT
     pdfContent += pdfFooter;
-    console.log(pdfContent);
 
     var myWindow = window.open("", "MsgWindow");
     myWindow.document.write(pdfContent);
